@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinayak Note Taking App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+     <!-- <link src="output.css" rel="stylesheet"> -->
+    <script src="https://kit.fontawesome.com/a1ddd54c4f.js" crossorigin="anonymous"></script>
+</head>
+
+<body class=" bg-blue-300">
+
+    <nav class="bg-neutral-600 my-[-20px] flex flex-row h-[100px] justify-between items-end">
+        <div class="mx-10 my-0">
+
+            <li><img class="w-[40px] h-[40px] my-5 " src="images/notes-logo.png" alt="logo"></li>
+
+        </div>
+        <div class="add-btn"><img src="images/plus-solid.svg"
+                class=" w-[40px] h-[40px] my-[20px] mx-[150px] cursor-pointer hover:bg-white"> </div>
+    </nav>
+
+    <section
+        class=" cursor-pointer mx-10 my-10 bg-slate-500 rounded-xl z-10 shadow-2xl border-solid border-black w-[300px] h-[200px] flex flex-col justify-center items-center  ">
+        <div>
+            <div class="  w-20   mx-auto  ">
+                <img class=" add-btn" src="images/add-notes-removebg-preview.png" alt="add-notes"
+                    class="hover:scale-150">
+
+            </div>
+            <div class="hover:text-white"> Add New Note </div>
+        </div>
+
+        
+
+   
+
+    </section>
+    <div id="notes" class="flex"></div>
+
+
+    </div>
+    <div class="fixed hidden inset-0 bg-gray-600 bg-opacity-90 overflow-y-auto h-full w-full" id="my-modal"></div>
+    <section>
+        <div
+            class="note-dialog hidden relative  flex-col  mx-auto my-auto p-5 border w-[500px] shadow-2xl rounded-md bg-white">
+            <form>
+                <b> <span class="text-xl">Add Notes to your Notebook:</span></b><br>
+                <textarea class="txt-note border-black rounded-lg border-2 w-[350px] h-[150px]"
+                    id="addnote"></textarea><br>
+                <button
+                    class="close-btn border-2 border-solid bg-blue-500 w-24 rounded-md p-1 font-semibold hover:text-white hover:bg-blue-700 cursor-pointer shadow-xl"
+                    id="finaladd">Add</button>
+            </form>
+        </div>
+
+    </section>
+    <script src="script-modal.js"></script>
+</body>
+
+</html>
